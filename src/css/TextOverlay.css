@@ -1,0 +1,80 @@
+.text-overlay-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.text-overlay {
+  position: absolute;
+  opacity: 0;
+  padding: 2rem;
+}
+
+/* Estilos específicos para cada página */
+.page1 {
+  top: 0vh;
+  left: 50%;
+  transform: translate(-50%, 50vh);
+  text-align: center;
+}
+
+.page2 {
+  top: 100vh;
+  right: 5%;
+  transform: translateY(50vh);
+  text-align: left;
+  width: 40%;
+}
+
+.page3 {
+  top: 200vh;
+  left: 5%;
+  transform: translateY(50vh);
+  text-align: right;
+  width: 40%;
+}
+
+.page4 {
+  top: 300vh;
+  right: 5%;
+  transform: translateY(50vh);
+  text-align: left;
+  width: 40%;
+}
+
+.page5 {
+  top: 400vh;
+  left: 50%;
+  transform: translate(-50%, 50vh);
+  text-align: center;
+}
+
+/* Estilos de texto */
+.title {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  font-family: 'Lobster', cursive;
+  color: #333;
+}
+
+.description {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-family: 'Roboto Slab', serif;
+  color: #666;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+}
+
+.features-list li {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Roboto Slab', serif;
+  color: #888;
+}
