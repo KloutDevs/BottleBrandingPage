@@ -18,14 +18,11 @@ import Scene from './components/Scene';
 function App() {
   return (
     <>
-      <div id={'bg_container'} className={'container'}>
-        <div className={'wrapper'}>
-          
+      <div className='scene_container'> 
           {/* Maneja la carga asíncrona*/}
           <Suspense fallback={null}>
             <Scene />
           </Suspense>
-        </div>
       </div>
     </>
   );
