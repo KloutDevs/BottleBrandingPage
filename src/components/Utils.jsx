@@ -1,6 +1,6 @@
 import * as THREE from "three";
 
-// Crea los materiales iniciales
+// Create the init materials for the Bottle
 export const GenerateInitMaterials = (colorsMaterial) => {
   const CocaColaTexture = new THREE.TextureLoader().load("./Brand1.png");
   CocaColaTexture.flipY = false;
@@ -35,12 +35,12 @@ export const GenerateInitMaterials = (colorsMaterial) => {
   return { cristalMaterial, sodaMaterial, brandMaterial };
 };
 
-// Carga las texturas
+// Load the textures
 export const LoadTextures = (imagePaths) => {
   const textureLoader = new THREE.TextureLoader();
   const textures = {};
 
-  // Carga y configura las imagenes de textura
+  // Load and configure the textures
   imagePaths.forEach((img) => {
     const path = `/${img}.png`;
     const texture = textureLoader.load(path);

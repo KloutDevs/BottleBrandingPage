@@ -1,30 +1,31 @@
 /* 
-TODO: Añadir fallback en lugar de null
+TODO: Add fallback instead of null
 
-Razones por las que usamos Suspense:
+Reasons why we use Suspense:
 
-Suspense nos ayuda a manejar la carga asíncrona de los componentes que envuelve
-En este caso es necesario porque tenemos modelos 3D, los cuales necesitan cargar
-texturas, y además es necesario inicializar Three.js
+Suspense helps us manage the asynchronous loading of components that wrap
+In this case, it is necessary because we have 3D models, which need to load
+textures, and also it is necessary to initialize Three.js
 
-Esto es una buena práctica para de UX
+This is a good practice for UX
 
 */
 
 import { Suspense } from 'react';
 import './App.css';
 import Scene from './components/Scene';
+import Labels from './components/Labels';
 
 function App() {
   return (
-    <>
+    <div className="main-container">
       <div className='scene_container'> 
-          {/* Maneja la carga asíncrona*/}
-          <Suspense fallback={null}>
-            <Scene />
-          </Suspense>
+        <Suspense fallback={null}>
+          <Scene />
+        </Suspense>
       </div>
-    </>
+      <Labels />
+    </div>
   );
 }
 
