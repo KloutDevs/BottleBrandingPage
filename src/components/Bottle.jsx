@@ -21,7 +21,7 @@ export function Bottle({ debugMode, ...props }) {
 
     let animationsData = [];
 
-    // First Page
+    // First Page - Coca Cola
     let firstPageAnimations = [
       // Animaciones de la botella
       {
@@ -43,12 +43,17 @@ export function Bottle({ debugMode, ...props }) {
 
       {
         objectToAnimate: '#welcome-section',
-        properties: { opacity: 0, y: -50 },
+        properties: { opacity: 0, y: -50, duration: 0.5 },
         timelinePoint: 0.2,
+      },
+      {
+        objectToAnimate: '#second-section',
+        properties: { opacity: 1, x: 50, duration: 0.5 },
+        timelinePoint: 1.5,
       },
     ];
 
-    // Second Page
+    // Second Page - Fanta
     let secondPageAnimations = [
       // Bottle animatinos
       {
@@ -57,7 +62,7 @@ export function Bottle({ debugMode, ...props }) {
           y: Math.PI * 4,
           duration: 1,
         },
-        timelinePoint: 2,
+        timelinePoint: 2.1,
       },
       {
         objectToAnimate: groupRef.current.position,
@@ -75,21 +80,19 @@ export function Bottle({ debugMode, ...props }) {
         },
         timelinePoint: 2.8,
       },
-
       {
         objectToAnimate: '#second-section',
-        properties: { opacity: 1, x: 0 },
-        timelinePoint: 2.2,
+        properties: { opacity: 0, x: 50, duration: 0.5 },
+        timelinePoint: 1.8,
       },
-
       {
-        objectToAnimate: '#second-section',
-        properties: { opacity: 0, x: 50 },
-        timelinePoint: 2.8,
+        objectToAnimate: '#third-section',
+        properties: { opacity: 1, x: 0, duration: 0.5 },
+        timelinePoint: 2.6,
       },
     ];
 
-    // Third Page
+    // Third Page - Sprite
     let thirdPageAnimations = [
       // Animaciones de la botella
       {
@@ -116,32 +119,24 @@ export function Bottle({ debugMode, ...props }) {
         },
         timelinePoint: 3.8,
       },
-
       {
         objectToAnimate: '#third-section',
-        properties: { opacity: 1, x: 0 },
-        timelinePoint: 3.2,
-      },
-
-      {
-        objectToAnimate: '#third-section',
-        properties: { opacity: 0, x: -50 },
-        timelinePoint: 3.8,
+        properties: { opacity: 0, x: -50, duration: 0.5 },
+        timelinePoint: 2.9,
       },
     ];
 
     // Fourth Page
     let fourthPageAnimations = [
       {
-        objectToAnimate: '#four-section',
-        properties: { opacity: 1, scale: 1 },
-        timelinePoint: 4.2,
+        objectToAnimate: '#fourth-section',
+        properties: { opacity: 1, x: 50, duration: 0.5 },
+        timelinePoint: 3.3,
       },
-
       {
-        objectToAnimate: '#four-section',
+        objectToAnimate: '#fourth-section',
         properties: { opacity: 0, scale: 0.9 },
-        timelinePoint: 4.8,
+        timelinePoint: 5,
       },
     ];
 
@@ -150,6 +145,22 @@ export function Bottle({ debugMode, ...props }) {
       {
         objectToAnimate: '#five-section',
         properties: { opacity: 1, y: 0 },
+        timelinePoint: 5,
+      },
+      {
+        objectToAnimate: groupRef.current.rotation,
+        properties: {
+          y: Math.PI * 2,
+          duration: 1,
+        },
+        timelinePoint: 5,
+      },
+      {
+        objectToAnimate: groupRef.current.position,
+        properties: {
+          x: -5,
+          duration: 1,
+        },
         timelinePoint: 5,
       },
     ];
@@ -181,7 +192,7 @@ export function Bottle({ debugMode, ...props }) {
     [setDebugInfo]
   );
 
-  useEffect(() => {
+  /*   useEffect(() => {
     const checkTimeChange = () => {
       const currentTime = scrollControl.offset * timeline.current.duration();
 
@@ -202,7 +213,7 @@ export function Bottle({ debugMode, ...props }) {
     const intervalId = setInterval(checkTimeChange, 16); // ~60fps
 
     return () => clearInterval(intervalId);
-  }, [scrollControl, timeline, debugMode, updateDebugInfo]);
+  }, [scrollControl, timeline, debugMode, updateDebugInfo]); */
 
   useFrame(() => {
     const currentTime = scrollControl.offset * timeline.current.duration();

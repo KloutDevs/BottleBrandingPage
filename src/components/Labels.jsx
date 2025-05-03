@@ -1,3 +1,5 @@
+import GithubButton from './GithubButton';
+
 export default function Labels() {
   return (
     <div className="pages">
@@ -13,48 +15,60 @@ export default function Labels() {
             de la Bebida
           </h1>
           <p className="message--sub font-outfit max-w-xl">
-            Navegue por nuestra colección exclusiva de bebidas premium. Cada botella cuenta una historia de calidad y
-            tradición.
+            Navegue por la colección de bebidas que contamos en nuestra distribuidora. Cada marca cuenta una historia de
+            calidad y tradición ofreciendo una experiencia diferente.
           </p>
         </div>
 
         {/* Second page */}
-        <div id="second-section" className="page page--headband page--hidden">
+        <div id="second-section" className="page page--coca page--hidden">
           <span className="message--sub font-outfit tracking-[0.3em] text-neutral-400 mb-4">EDICIÓN CLÁSICA</span>
-          <h2 className="message font-syncopate">Zero Sugar</h2>
+          <h2 className="message font-great-vibes cocaCola">Coca Cola</h2>
           <p className="message--sub font-outfit max-w-md">
-            Refinamiento sin compromiso. Una experiencia perfectamente equilibrada para el paladar moderno.
+            Coca Cola es más que una bebida; es una tradición que ha unido a generaciones. Con su sabor inconfundible y
+            efervescencia característica, ofrece una experiencia refrescante e inolvidable. Perfecta para compartir en
+            cualquier ocasión, representa el espíritu de unión y felicidad que define a Argentina.
           </p>
         </div>
 
         {/* Third page */}
-        <div id="third-section" className="page page--sounds page--hidden">
-          <span className="message--sub font-outfit tracking-[0.3em] text-neutral-400 mb-4">EDICIÓN ESPECIAL</span>
-          <h2 className="message font-syncopate">Cherry Edition</h2>
+        <div id="third-section" className="page page--fanta page--hidden">
+          <span className="message--sub font-outfit tracking-[0.3em] text-neutral-400 mb-4">EDICIÓN CLÁSICA</span>
+          <h2 className="message font-syncopate">Fanta</h2>
           <p className="message--sub font-outfit max-w-md">
-            Una fusión sofisticada que desafía lo convencional. Descubre una nueva dimensión de sabor.
+            Fanta, con su vibrante sabor a naranja y burbujeante personalidad, es el compañero ideal para los momentos
+            de diversión. Cada sorbo es una explosión de alegría y color, perfecta para alegrar tus días. Fanta celebra
+            la creatividad y el espíritu juvenil de Argentina con cada burbuja.
           </p>
         </div>
 
         {/* Fourth page */}
-        <div id="four-section" className="page page--battery page--hidden">
-          <h2 className="message font-syncopate">Tu Elección Premium</h2>
-          <button className="comprar font-outfit">EXPLORAR COLECCIÓN</button>
+        <div id="fourth-section" className="page page--sprite page--hidden">
+          <span className="message--sub font-outfit tracking-[0.3em] text-neutral-400 mb-4">EDICIÓN CLÁSICA</span>
+          <h2 className="message font-syncopate">Sprite</h2>
+          <p className="message--sub font-outfit max-w-md">
+            Sprite es la elección perfecta para aquellos que prefieren la frescura sencilla y auténtica. Con su mezcla
+            de limón y lima, ofrece una claridad refrescante que enciende tus sentidos. Ideal para cualquier momento del
+            día, Sprite captura la esencia de frescura y transparencia que tanto valoramos los argentinos.
+          </p>
         </div>
 
         {/* Fifth page */}
-        <div id="five-section" className="page page--construction page--hidden">
+        <div id="five-section" className="page page--end page--hidden justify-center items-center">
           <h2 className="message--sub font-outfit tracking-[0.2em] mb-8">CONÉCTATE CON NOSOTROS</h2>
-          <div className="social-links font-outfit">
-            <a href="#" className="message--sub">
+          <div className="social-links font-outfit mb-8">
+            <a href="https://www.instagram.com/s_nahuuu/" className="message--sub hover:text-white transition-colors clickable">
               INSTAGRAM
             </a>
-            <a href="#" className="message--sub">
-              FACEBOOK
+            <a href="https://www.linkedin.com/in/nahuel-schmidt-720b57263/" className="message--sub hover:text-white transition-colors clickable">
+              LINKEDIN
             </a>
-            <a href="#" className="message--sub">
-              TWITTER
+            <a href="https://www.threads.net/@s_nahuuu" className="message--sub hover:text-white transition-colors clickable">
+              THREADS
             </a>
+          </div>
+          <div className="w-full max-w-xs clickable">
+            <GithubButton />
           </div>
         </div>
       </div>
